@@ -6,3 +6,4 @@ https://superusers-kursus@dev.azure.com/superusers-kursus/windowspowershell/_git
 
 Learning git: https://dev.azure.com/superusers-kursus/learning-git
 
+https://learning-azure.azurewebsites.net/container-as-a-service/
