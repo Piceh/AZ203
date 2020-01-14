@@ -1,0 +1,33 @@
+
+$rg = "webapp-pipeline"
+$plan = "MVC-Demo-Pipeline"
+$webapp = "MVC-Demo-Pipeline-APP"
+
+az login
+az --help
+
+az group create --help
+az group create -l westeurope -n $rg
+
+az appservice plan create --resource-group $rg --name $plan --sku F1
+
+# name + Ressource group + plan (appservice plan)
+
+az webapp create -g $rg -p $plan -n $webapp
+
+az webapp show -n $webapp -g $rg --query "defaultHostName"
+
+$site = $( az webapp show -n $webapp -g $rg --query "defaultHostName" -o tsv)
+
+#Start-Process #skipped.
+
+Start-Process("https://$site")
+
+# Configure repo deployment
+$repo = "https://arifydevops.visualstudio.com/Pipeline%20POC/_git/dotnet-mvc-poc"
+
+az webapp deployment source config -n $webapp -g $rg --repo-url $repo --branch master --manual-integration
+
+az webapp deployment source sync -n $webapp -g $rg
+## az webapp config appsettings set --help ## need to figure out how to set stack settings to .net core.. ?? (maybe it will change it self once working?)
+
