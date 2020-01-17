@@ -16,3 +16,6 @@ https://github.com/TryGhost/Ghost
 
 // Bedre git
 https://semantic-release.gitbook.io/semantic-release/
+
+// Terraform
+https://github.com/scarolan/azure-terraform-beginners/blob/master/docs/index.html
