@@ -19,3 +19,9 @@ https://semantic-release.gitbook.io/semantic-release/
 
 // Terraform
 https://github.com/scarolan/azure-terraform-beginners/blob/master/docs/index.html
+
+
+// React
+
+https://levelup.gitconnected.com/an-introduction-to-react-hooks-50281fd961fe 
+https://dev.to/myogeshchavan97/an-introduction-to-async-await-41c8
